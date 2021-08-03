@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+# NOTE Step 1: add code here
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,10 +64,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tutorial_django.urls'
 
+# NOTE Step 1: add code here - add to DIRS
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,7 +139,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # NOTE Step 1 Init Setup project
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
