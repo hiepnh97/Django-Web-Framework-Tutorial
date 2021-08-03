@@ -1,0 +1,27 @@
+Create Project
+============================
+docker-compose run django django-admin startproject project_name .
+
+Go to bash inside docker container
+============================
+docker exec -it django bash
+docker exec -it postgres psql -U postgres
+
+Start/Stop container
+============================
+docker-compose up / down
+
+Postgres
+==================
+docker exec -it postgres psql -U postgres
+\c <database_name>
+\d
+\d+ <table_name>
+\q
+
+Migrattions
+=================
+docker-compose run django python manage.py makemigrations
+docker-compose run django python manage.py migrate
+
+
